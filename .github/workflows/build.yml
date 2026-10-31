@@ -1,0 +1,29 @@
+name: Build Monty Card DMG
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   # lets you run it by hand from the Actions tab
+
+jobs:
+  build:
+    runs-on: macos-14   # GitHub's Apple-Silicon Mac runner
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install create-dmg (nicer DMG layout)
+        run: brew install create-dmg
+
+      - name: Build the app and DMG
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: MontyCard-dmg
+          path: build/MontyCard.dmg
+          if-no-files-found: error
