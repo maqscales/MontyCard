@@ -158,10 +158,10 @@ if command -v create-dmg >/dev/null 2>&1; then
         --window-pos 200 120 \
         --window-size 700 460 \
         --icon-size 110 \
-        --icon "MontyCard.app" 175 220 \
+        --icon "MontyCard.app" 165 245 \
         --hide-extension "MontyCard.app" \
-        --app-drop-link 525 220 \
-        --add-file "README.txt" "dmg_assets/README.txt" 350 360 \
+        --app-drop-link 527 245 \
+        --add-file "README.txt" "dmg_assets/README.txt" 346 390 \
         --filesystem APFS \
         --overwrite \
         "build/${APP_NAME}.dmg" \
