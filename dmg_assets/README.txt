@@ -1,27 +1,27 @@
 ============================================================
-              AirCard · Quick Start Guide
+              Monty Card · Quick Start Guide
 ============================================================
 
 1. INSTALLATION:
-   Drag and drop the "AirCard" icon into the "Applications" folder.
+   Drag and drop the "Monty Card" icon into the "Applications" folder.
 
 2. FIRST LAUNCH (macOS Gatekeeper):
-   Since AirCard is built locally, macOS might show a standard security prompt on first launch.
-   
+   Since Monty Card is built locally, macOS might show a standard security prompt on first launch.
+
    Method 1 (Recommended):
-   Right-click (Control-click) on AirCard in Applications -> click "Open" -> click "Open".
-   
+   Right-click (Control-click) on Monty Card in Applications -> click "Open" -> click "Open".
+
    Method 2 (via Terminal):
-   sudo xattr -cr /Applications/AirCard.app
+   sudo xattr -cr /Applications/MontyCard.app
 
 3. ZERO PREREQUISITES:
-   AirCard is 100% self-contained for both Apple Silicon and Intel (x86) Macs.
+   Monty Card is 100% self-contained for both Apple Silicon and Intel (x86) Macs.
    No Homebrew, Python packages, or external tools required!
 
 4. HOW TO USE:
    [Apple Wallet Cards]
    - Connect your iPhone via USB cable and tap "Trust this Computer".
-   - Open AirCard (the device status badge will turn green).
+   - Open Monty Card (the device status badge will turn green).
    - Click "Scan Cards".
    - On your iPhone, double-click the Side button, pass Face ID, and tap your card.
    - Assign a custom skin image (click or drag & drop onto the card).
@@ -37,5 +37,6 @@
    * NOTE: Supports all system languages (RU, UK, EN, etc.) and Bold Text!
 
 ============================================================
-Developed by @mak5er & @Lumid-Off
+Monty Card is a rebranded fork of AirCard (MIT License).
+Original work by @mak5er & @Lumid-Off.
 ============================================================

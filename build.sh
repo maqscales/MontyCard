@@ -57,8 +57,10 @@ cat << 'EOF' > "${CONTENTS_DIR}/Info.plist"
 EOF
 
 echo "==> [3/6] Bundling universal tools & libraries..."
-# Copy App Icon
-if [ -f "dmg_assets/AppIcon.icns" ]; then
+# App Icon: build AppIcon.icns from the iconset on macOS, else use a prebuilt .icns.
+if [ -d "dmg_assets/AppIcon.iconset" ] && command -v iconutil >/dev/null 2>&1; then
+    iconutil -c icns "dmg_assets/AppIcon.iconset" -o "${RESOURCES_DIR}/AppIcon.icns"
+elif [ -f "dmg_assets/AppIcon.icns" ]; then
     cp "dmg_assets/AppIcon.icns" "${RESOURCES_DIR}/AppIcon.icns"
 fi
 
