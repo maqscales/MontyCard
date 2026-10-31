@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14   # GitHub's Apple-Silicon Mac runner
+    runs-on: macos-15   # GitHub's Apple-Silicon Mac runner (macos-14 retired Nov 2026)
 
     steps:
       - name: Check out code
